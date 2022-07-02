@@ -1,0 +1,261 @@
+:root {
+  --background: #000;
+  --text-color: #fff;
+  --button: #8257e5;
+  --border: #29292e;
+  --border-menu-mobile: #a8a8b3;
+  --text-color-menu-mobile: #e1e1e6;
+}
+
+root,
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--background);
+  color: var(--text-color);
+  font-family: "Manrope", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  padding-top: 50px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1024px;
+  height: 100%;
+  /* border: 1px solid green; */
+  z-index: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button-get-coffee {
+  width: 270px;
+  height: 40px;
+  /* font-size: 0.8em; */
+  background-color: transparent; // var(--background);
+  color: var(--text-color);
+  border: 2p solid;
+  border-color: var(--button);
+  border-radius: 6px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.button-get-coffee:hover {
+  background-color: var(--button);
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evelin;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+
+nav menu {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  padding: 5px;
+  padding: 0 50px;
+  box-sizing: border-box;
+}
+
+line {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+column {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 25px;
+  width: 100%;
+  max-width: 250px;
+  background: var(--green);
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition-duration: 1s;
+  z-index: 1;
+}
+
+aside p {
+  display: flex;
+  align-items: center;
+}
+
+aside img {
+  padding-right: 15px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  /* height: 100%; */
+  align-content: center;
+  /* border: 1px solid yellow; */
+}
+
+main h1 {
+  padding: 0;
+  margin: 50px 0 0 0;
+  font-size: 5em;
+  text-align: center;
+}
+
+main h2 {
+  padding: 0;
+  margin: 0;
+  font-size: 5em;
+  text-align: center;
+  color: var(--background);
+  text-shadow: 1px 0px 0px var(--button), -1px 0px 0px var(--button),
+    0px 1px 0px var(--button), 0px -1px 0px var(--button);
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.logo-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+
+.menu-area {
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+}
+
+.menu-item {
+  flex-direction: row;
+}
+
+.menu-button {
+  width: auto;
+  height: 50px;
+  color: var(--text-color);
+  background: none;
+  transition-duration: 0.4s;
+  border: none;
+  text-align: left;
+  padding: 0 20px;
+}
+
+.menu-button:hover {
+  color: var(--button);
+  border-left: 5px solid var(--button);
+}
+
+.menu-burger {
+  align-items: center;
+  width: auto;
+  height: 50px;
+  color: var(--text-color);
+  background: none;
+  transition-duration: 0.4s;
+  border: none;
+  position: fixed;
+  z-index: 999;
+  left: 5px;
+  top: 5px;
+}
+
+.menu-burger:hover {
+  color: var(--button);
+  border-left: 5px solid var(--button);
+}
+
+.menu-button-close {
+  width: auto;
+  height: 50px;
+  background: none;
+  transition-duration: 0.4s;
+  border: none;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.menu-img {
+  padding: 0;
+}
+
+.exit-button {
+  width: auto;
+  background: none;
+  transition-duration: 0.4s;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.exit-button:hover {
+  background: var(--green);
+}
+
+.exit-img {
+  padding: 0;
+}
+
+.blur-left-bottom {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+.blur-right-top {
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.title-great-code {
+  content: "<Great Code/>";
+  font-size: 4em;
+  font-weight: bold;
+}
+
+.img-rocket-coffee {
+  max-width: ;
+}
