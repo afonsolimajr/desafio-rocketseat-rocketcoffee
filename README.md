@@ -1,2 +1,2 @@
-# desafio-rocketseat-rocketcoffee
-Desafio Rocketseat RocketCoffee
+# rocketseat-desafio-rocketcoffee
+Rocketseat desafio RocketCoffee
