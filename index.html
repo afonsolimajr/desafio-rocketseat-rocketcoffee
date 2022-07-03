@@ -18,29 +18,37 @@
     <img class="blur-left-bottom" src="./assets/blur-1.png" />
     <img class="blur-right-top" src="./assets/blur-2.png" />
 
-    <button id="btnburger" class="menu-burger" onclick="openMenu()">
-      <img src="./assets/menu-buguer-open.svg" />
-    </button>
+    <nav class="nav-mobile">
+      <div class="logo-menu">
+        <img src="./assets/logo-mobile.svg" />
+        <button id="btnclose" class="menu-button-close" onclick="closeMenu()">
+          <img src="./assets/menu-buguer-close.svg" />
+        </button>
+        <button id="btnburger" class="menu-button-close" onclick="openMenu()">
+          <img src="./assets/menu-buguer-open.svg" />
+        </button>
+      </div>
+    </nav>
 
     <aside id="sidebar">
       <div>
-        <div class="logo-menu">
-          <img src="./assets/logo-mobile.svg" />
-          <button id="closebtn" class="menu-button-close" onclick="closeMenu()">
-            <img src="./assets/menu-buguer-close.svg" />
-          </button>
-        </div>
         <div class="menu-area">
-          <button class="menu-button">Início</button>
-          <button class="menu-button">Menu</button>
-          <button class="menu-button">Recompensas</button>
-          <button class="menu-button">Gift Card</button>
-          <button class="menu-button">Lojas</button>
+          <button class="menu-button" onclick="handleMenuClick()">
+            Início
+          </button>
+          <button class="menu-button" onclick="handleMenuClick()">Menu</button>
+          <button class="menu-button" onclick="handleMenuClick()">
+            Recompensas
+          </button>
+          <button class="menu-button" onclick="handleMenuClick()">
+            Gift Card
+          </button>
+          <button class="menu-button" onclick="handleMenuClick()">Lojas</button>
         </div>
       </div>
     </aside>
     <div class="container">
-      <nav>
+      <nav class="nav-desktop">
         <img src="./assets/logo-desktop.svg" alt="logo" />
         <menu>
           <a href="#"><strong>Início</strong></a>
@@ -53,11 +61,12 @@
       </nav>
 
       <main>
+        <h3>O café que fará seu código decolar para o próximo nível</h3>
+        <button class="button-get-coffee button-get-coffee-mobile">
+          PEGAR MEU
+        </button>
         <h1><strong>Great Coffee</strong></h1>
         <h2>&lt;Great Code/&gt;</h2>
-        <h1>
-          <!-- <p class="title-great-code">teste</p> -->
-        </h1>
         <img
           class="img-rocket-coffee"
           src="./assets/rocket-coffee.png"

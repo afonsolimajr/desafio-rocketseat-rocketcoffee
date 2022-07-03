@@ -5,6 +5,8 @@
   --border: #29292e;
   --border-menu-mobile: #a8a8b3;
   --text-color-menu-mobile: #e1e1e6;
+
+  --media-width-mobile: 800px;
 }
 
 root,
@@ -22,7 +24,7 @@ body {
 
 body {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   height: 100vh;
   width: 100%;
@@ -60,19 +62,56 @@ a {
   background-color: var(--button);
 }
 
+.button-get-coffee-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .button-get-coffee-mobile {
+    display: block;
+  }
+}
+
 div {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
 }
 
-nav {
+.nav-desktop {
   display: flex;
   flex-direction: row;
   width: 100%;
+  max-width: 800px;
   justify-content: space-evelin;
   align-items: center;
-  /* border: 1px solid red; */
+  margin: 0 30px;
+  box-sizing: border-box;
+}
+
+.nav-mobile {
+  display: none;
+  flex-direction: row;
+  width: 100%;
+  height: 70px;
+  justify-content: space-evelin;
+  align-items: center;
+  z-index: 999;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: var(--background);
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 800px) {
+  .nav-desktop {
+    display: none;
+  }
+
+  .nav-mobile {
+    display: flex;
+  }
 }
 
 nav menu {
@@ -102,15 +141,17 @@ aside {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-width: 25px;
   width: 100%;
-  max-width: 250px;
   background: var(--green);
   height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
-  transition-duration: 1s;
-  z-index: 1;
+  transition-duration: 0.4s;
+  z-index: 998;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  background: black;
 }
 
 aside p {
@@ -125,11 +166,12 @@ aside img {
 main {
   display: flex;
   flex-direction: column;
-
+  padding: 0 30px;
   width: 100%;
   /* height: 100%; */
-  align-content: center;
+  align-items: center;
   /* border: 1px solid yellow; */
+  box-sizing: border-box;
 }
 
 main h1 {
@@ -149,6 +191,28 @@ main h2 {
     0px 1px 0px var(--button), 0px -1px 0px var(--button);
 }
 
+main h3 {
+  display: none;
+  padding: 0;
+  margin: 50px 0;
+  font-size: 2em;
+  text-align: center;
+}
+
+@media only screen and (max-width: 800px) {
+  main h1 {
+    font-size: 3em;
+  }
+
+  main h2 {
+    font-size: 3em;
+  }
+
+  main h3 {
+    display: block;
+  }
+}
+
 a {
   text-decoration: none;
   color: var(--text-color);
@@ -157,9 +221,11 @@ a {
 .logo-menu {
   display: flex;
   flex-direction: row;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
-  margin: 10px;
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .menu-area {
@@ -175,12 +241,13 @@ a {
 .menu-button {
   width: auto;
   height: 50px;
-  color: var(--text-color);
+  color: var(--text-color-menu-mobile);
   background: none;
   transition-duration: 0.4s;
   border: none;
   text-align: left;
   padding: 0 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .menu-button:hover {
@@ -189,6 +256,7 @@ a {
 }
 
 .menu-burger {
+  display: none;
   align-items: center;
   width: auto;
   height: 50px;
@@ -205,6 +273,12 @@ a {
 .menu-burger:hover {
   color: var(--button);
   border-left: 5px solid var(--button);
+}
+
+@media only screen and (max-width: 800px) {
+  .menu-burger {
+    display: block;
+  }
 }
 
 .menu-button-close {
@@ -257,5 +331,6 @@ a {
 }
 
 .img-rocket-coffee {
-  max-width: ;
+  width: 100%;
+  max-width: 800px;
 }
